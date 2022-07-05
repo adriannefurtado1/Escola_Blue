@@ -1,0 +1,20 @@
+CREATE DATABASE escola;
+
+CREATE TABLE Turma(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	nome VARCHAR(20) NOT NULL,
+	ativo BIT NULL,
+);
+
+CREATE TABLE Aluno(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	dataNascimento DATETIME NOT NULL,
+	sexo CHAR(1) NOT NULL,
+	turmaId INT NOT NULL FOREIGN KEY REFERENCES Turma(id),
+	totalFaltas INT NULL,
+);
+
+
+DROP TABLE aluno;
+DROP TABLE turma;

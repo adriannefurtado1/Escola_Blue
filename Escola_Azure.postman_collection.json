@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "54dc6026-8e36-484e-b448-3e1204d7ca66",
+		"name": "Escola_Azure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21621607"
+	},
+	"item": [
+		{
+			"name": "Turma",
+			"item": [
+				{
+					"name": "Ler todas as turmas ativas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/turma",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"turma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ler turma por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Turma/1",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Turma",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Turma",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"nome\": \"futebol_seg_manha\",\r\n  \"ativo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Turma",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Turma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Turma",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"futebol_ter_manha\",\r\n  \"ativo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Turma/1",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Turma",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Turma",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"futebol_ter_manha\",\r\n  \"ativo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Turma/1",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Turma",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "Ler todos os alunos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Aluno",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ler alunos por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Aluno/1",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Aluno",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Aluno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"nome\": \"Abel\",\r\n  \"dataNascimento\": \"2022-07-02T19:31:27.329Z\",\r\n  \"sexo\": \"m\",\r\n  \"turma_ID\": 1,\r\n  \"totalFaltas\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Aluno",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Aluno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"nome\": \"Abel\",\r\n  \"dataNascimento\": \"2022-07-02T19:31:27.329Z\",\r\n  \"sexo\": \"m\",\r\n  \"turma_ID\": 1,\r\n  \"totalFaltas\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Aluno",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Aluno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"nome\": \"Abel\",\r\n  \"dataNascimento\": \"2022-07-02T19:31:27.329Z\",\r\n  \"sexo\": \"m\",\r\n  \"turma_ID\": 1,\r\n  \"totalFaltas\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://escola20220704104152.azurewebsites.net/api/Aluno/",
+							"protocol": "https",
+							"host": [
+								"escola20220704104152",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"Aluno",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
